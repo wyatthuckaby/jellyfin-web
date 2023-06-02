@@ -201,7 +201,7 @@ const ScheduledTaskPage = {
         let timeLimit = $('#txtTimeLimit', page).val() || '0';
         timeLimit = parseFloat(timeLimit) * 3600000;
 
-        trigger.MaxRuntimeMs = timeLimit || null;
+        trigger.MaxRuntimeTicks = (timeLimit * 10000) || null;
 
         return trigger;
     }
